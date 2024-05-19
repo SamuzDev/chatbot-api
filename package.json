@@ -4,8 +4,8 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "dev": "node --watch src/app.js",
     "start": "node src/app.js",
+    "dev": "node -r dotenv/config --watch src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -1,16 +1,13 @@
-dotenv.config();
-
 import express from 'express';
 import OpenAI from 'openai';
 import cors from 'cors';
-import dotenv from 'dotenv';
 import morgan from'morgan';
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(cors())
-app.use(morgan('dev'));
+app.use(morgan(process.env.NODE_ENV === 'development'? 'dev' : 'combined'));
 app.use(express.json());
 
 const openai = new OpenAI({
