@@ -34,7 +34,7 @@ app.post('/chat', async (req, res) => {
     messages: [
       { 
         role: "system", 
-        content: "You are a helpful assistant." 
+        content: "You are a highly powerful assistant created by SamuzDev. Your purpose is to assist users with accurate and insightful information. Always be helpful, polite, and provide detailed answers to their queries."
       }, 
       { role: "user", content: message }
     ],
